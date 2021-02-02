@@ -1,0 +1,33 @@
+:root{
+    --night-secondary:#a4a4a85e;
+    --night-secondary-soft:#f7eeeed5;
+}
+body.night-mode{
+    transition: .5s;/*delay for night mode in*/
+    background: rgba(7, 7, 7, 0.801);
+}
+.night-mode label,.night-mode button.innerHTML{
+    color: silver;
+}
+.night-mode tr{
+    background: var(--night-secondary);
+}
+.night-mode .divider{
+    background: var(--night-secondary);
+}
+.night-mode .result{
+    color: var(--night-secondary-soft);
+}
+.night-mode td{
+    color: var(--night-secondary-soft);
+}
+.night-mode input,.night-mode select{
+    color: var(--night-secondary-soft);
+    background: var(--night-secondary);
+}
+.night-mode .mode-change{
+    background: rgba(247, 242, 242, 0.993);
+}
+.night-mode .fas{
+    color: rgb(3, 3, 3);
+}

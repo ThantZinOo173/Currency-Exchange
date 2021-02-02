@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@font-face {
+    font-family: "mm";
+    font-weight: normal;
+    src: url("..//fonts/MyanmarSquare.ttf");
+}
+@font-face {
+    font-family: "mm";
+    font-weight: bold;
+    src: url("..//fonts/MyanmarSquareLight.ttf");
+}
+.mm{
+    font-family:"mm";
+}
+
+:root{
+    --primary:#2CD1EE;
+    --secondary:#1f0808f6;
+    --light:#977171;
+    --dark:#000000;
+    --br: 6px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Yusei Magic', "mm";
+    color:var(--secondary);
+}
+.divider{
+    background:var(--secondary);
+    height: 5px;
+    border-radius: var(--br);
+}
+.app{
+    width: 70%;
+    margin: 5% auto;
+
+}
+.output{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.output>.brand-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.output>.brand-container>.logo{
+    width: 20%;
+    border-radius: 15%;
+}
+.output>.brand-container>.brand{
+    margin-left: 1.5%;
+    font-size: 40px;
+}
+.result-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result-container>.result{
+    font-size: 40px;
+}
+.calc{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.container{
+    width: 20%;
+}
+.input,.from,.to{
+    width: 100%;
+    padding: 4%;
+    border-radius: var(--br);
+    border: 1px solid var(--secondary);
+}
+.input{
+    text-align: right;
+}
+.container>label{
+    display: block;
+    margin-bottom: 4%;
+    text-align: center;
+}
+.calc-btn{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--br);
+    border: 1px solid var(--primary);
+    background: var(--primary);
+    color: var(--light);
+    font-size: 140%;
+    text-transform: uppercase;
+}
+.calc-btn:active{
+    background: rgba(10, 169, 243, 0.582);
+}
+/* to hide arrow sing in input type number*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* select drop arrow hide */
+select{
+    /*For FireFox*/
+   -webkit-appearance: none;
+   /*For Chrome*/
+   -moz-appearance: none;
+}
+/*For IE10+*/
+select:disabled.simple-control::-ms-expand {
+   display: none;
+}
+
+/*to hide border on click*/
+select,input,button:focus{
+    outline: none;
+}
+.history-container{
+    margin-top: 5%;
+}
+.history{
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+    background: var(--primary);
+    padding: 7px;
+    color: var(--light);
+}
+td{
+    text-align: center;
+    padding: 5px;
+    color: rgb(2, 0, 0);
+}
+tr:nth-child(even){
+    background: rgba(142, 73, 151, 0.418);
+}
+tr:hover{
+    background: rgba(0, 0, 0, 0.212);
+}
+th,td{
+    width: 15%;
+}
+th:first-child,th:last-child,td:first-child,td:last-child{
+    width: 35%;
+}
+#nonHistory>td{
+    padding: 25px;
+    background: rgb(101, 214, 177);
+}
+.mode-change{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--light);
+    background: rgba(0, 0, 0, 0.575);
+    position: fixed;
+    top: 3%;
+    right: 2%;
+}
+.fas{
+    color: white;
+}
+body{/*delay for night mode out*/
+    transition: .5s;
+}
+
+@media screen and (max-width:480px){
+    .app{
+        width: 95%;
+    }
+    .output{
+        flex-flow: column;
+        align-items: flex-end;
+    }
+    .brand-container{
+        width: 100%;
+    }
+    .calc{
+        flex-wrap: wrap;
+    }
+    .container{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .from-container,.to-container{
+        width: 47%;
+        margin-bottom: 26px;
+    }
+    .input,.from,.to{
+        padding: 15px 10px;
+    }
+    .calc-btn{
+        padding: 20px 0px;
+    }
+    .mode-change{
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 2%;
+        right: 2%;
+    }
+}

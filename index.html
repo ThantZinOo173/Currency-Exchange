@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+<title>MM Exchange</title>
+<meta name="title" content="MMS Exchange">
+<meta name="description" content="Testing for SWD online class ................">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="youtube.com">
+<meta property="og:title" content="MMS Exchange">
+<meta property="og:description" content="Testing for SWD online class ................">
+<meta property="og:image" content="img/logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="youtube.com">
+<meta property="twitter:title" content="MMS Exchange">
+<meta property="twitter:description" content="Testing for SWD online class ................">
+<meta property="twitter:image" content="img/logo.png">
+
+    <link rel="icon" href="img/logo-full.svg" type="image/icons">
+    <title>exchange calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/fontAswneIcons/css/all.css">
+    <link rel="stylesheet" href="vendor/animateIt/animate.css">
+    <link rel="stylesheet" href="css/night-mode.css">
+</head>
+<body>
+    
+    <div class="app">
+        <div class="output animate__animated animate__fadeInDown">
+            <div class="brand-container">
+                <img src="img/logo-full.svg" class="logo" alt="">
+                <p class="brand"> MM Ex </p>
+            </div>
+            <div class="result-container">
+                <p class="result" id="result">00.0</p>
+            </div>
+        </div>
+        <div class="divider animate__animated animate__fadeInDown animate__delay-1s"></div>
+        <form class="calc animate__animated animate__fadeInDown animate__delay-2s"> <!--form tag let use required property--> 
+            <div class="input-container container">
+                <label for="Input">Input</label>
+                <input type="number" class="input" id="Input" placeholder="00.0" autofocus required min="1">
+            </div>
+            <div class="from-container container">
+                <label for="from">From</label>
+                <select name="from" class="from" id="from" required>
+                    <option value="">select currency</option>
+                </select>
+            </div>
+            <div class="to-container container">
+                <label for="to">To</label>
+                <select name="to" class="to" id="to" required></select>
+            </div>
+            <div class="calculate-container container">
+                <button class="calc-btn" id="calcBtn">Calculate</button>
+            </div>
+        </form>
+
+        <div class="history-container animate__animated animate__fadeInDown animate__delay-3s">
+            <table class="history" border="1">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="historyList">
+                    
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+    <button class="mode-change animate__animated animate__bounce animate__delay-4s" onclick="changeMode()">
+        <i class="fas fa-moon" id="mode-icon"></i>
+    </button>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
